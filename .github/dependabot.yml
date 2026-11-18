@@ -1,0 +1,13 @@
+# Keeps upstream/ (LIO-SAM-V2, ros2 branch) current: Dependabot opens a PR
+# whenever the submodule's branch moves. Review the upstream changes, then merge.
+version: 2
+updates:
+  - package-ecosystem: "gitsubmodule"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "upstream"
+    labels:
+      - "dependencies"
+      - "upstream"
