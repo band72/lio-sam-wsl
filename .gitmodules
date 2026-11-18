@@ -1,0 +1,4 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/band72/LIO-SAM-V2.git
+	branch = ros2

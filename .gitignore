@@ -1,0 +1,8 @@
+build/
+dist/
+out/
+*.tar.gz
+*.exe
+*.msi
+__pycache__/
+*.pyc
