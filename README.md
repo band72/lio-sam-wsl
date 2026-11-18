@@ -23,17 +23,20 @@ Windows installer (.exe)
 
 ## Requirements (end users)
 
-- Windows 10 21H2+ or Windows 11, 64-bit, with hardware virtualization enabled
+- **Windows 11 25H2 or 26H2** x64 (Windows 10 22H2 best effort while its ESU lasts, to 2027-10-12), with hardware virtualization enabled
+- **WSL 2.4.8 or later** with WSLg (`wsl --version`; update with `wsl --update`)
 - 16 GB RAM recommended (SLAM + RViz on large bags use 6–10 GB)
 - ~10 GB disk for the distro, plus space for bags and maps
 - For live Ouster recording: Windows 11 with WSL "mirrored" networking
+
+Full version matrix: see [TODO.md](TODO.md#target-platforms-and-versions-reviewed-2026-11).
 
 ## Repository layout
 
 | Path | Purpose |
 |---|---|
 | `upstream/` | Git submodule → `LIO-SAM-V2` (`ros2` branch). The application source; **not modified here**. |
-| `image/` | Builds the WSL distro image (rootfs tarball) from Ubuntu 24.04 + ROS 2 Jazzy + `upstream/` |
+| `image/` | Builds the WSL distro (`.wsl` package) from Ubuntu 24.04 + ROS 2 Jazzy + `upstream/` |
 | `launcher/` | Windows-side launcher (shortcut target, drive mapping, first-run checks) |
 | `installer/` | Installer definition (Inno Setup or WiX) |
 | `docs/` | User and maintainer documentation |
